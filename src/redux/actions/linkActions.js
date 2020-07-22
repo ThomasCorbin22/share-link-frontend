@@ -35,7 +35,7 @@ export function postLinkFailure() {
 export function loadLinks() {
   return (dispatch) => {
     return axios
-      .get("http://localhost:8084/app-04/links")
+      .get("http://terrarie.net/app-04/links")
       .then((res) => {
         console.log("data", res.data);
         dispatch(loadLinkSuccess(res.data));
@@ -51,7 +51,7 @@ export function postLink(link) {
   return (dispatch) => {
     console.log(link);
     return axios
-      .post("http://localhost:8084/app-04/links", link)
+      .post("http://terrarie.net/app-04/links", link)
       .then((res) => {
         console.log("data", res.data);
         dispatch(postLinkSuccess(res.data));
